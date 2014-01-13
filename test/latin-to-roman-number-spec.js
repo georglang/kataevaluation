@@ -39,6 +39,11 @@ describe('latin to roman number', function() {
       .toBe('X');
   });
 
+  it('50 should be L', function() {
+    expect(convert(50))
+      .toBe('L');
+  });
+
   describe('multi character numbers', function() {
     describe('post fix', function() {
       it('2 => II', function() {
@@ -70,4 +75,5 @@ describe('latin to roman number', function() {
       });
     });
   });
+
 });
