@@ -2,6 +2,7 @@ var convert = function(num) {
   var nums = {
     10: 'X',
     9: 'IX',
+    4: 'IV',
     5: 'V',
     1: 'I'
   };
