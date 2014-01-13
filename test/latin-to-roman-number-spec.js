@@ -45,6 +45,11 @@ describe('latin to roman number', function() {
       .toBe('L');
   });
 
+  it('100 should be C', function() {
+    expect(convert(100))
+      .toBe('C');
+  });
+
   describe('multi character numbers', function() {
     describe('post fix', function() {
       it('2 => II', function() {
