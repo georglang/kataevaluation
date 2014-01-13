@@ -25,4 +25,9 @@ describe('latin to roman number', function() {
       .toBe('V');
   });
 
+  it('10 should be X', function() {
+    expect(convert(10))
+      .toBe('X');
+  });
+
 });
