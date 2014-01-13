@@ -80,4 +80,7 @@ describe('Roman Numberals', function () {
   it('should convert 1999 to MCMXCIX', function () {
     expect(convert(1999)).toBe('MCMXCIX');
   });
+  it('should convert 969 to CMLXIX', function () {
+    expect(convert(969)).toBe('CMLXIX');
+  });
 });
