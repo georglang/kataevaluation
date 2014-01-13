@@ -47,5 +47,9 @@ describe('latin to roman number', function() {
       expect(convert(3))
         .toBe('III');
     });
+    it('6 => VI', function() {
+      expect(convert(6))
+        .toBe('VI');
+    });
   });
 });
