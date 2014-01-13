@@ -13,6 +13,9 @@ var convert = function(num) {
   if (nums.hasOwnProperty(num - 2)) {
     return 'III';
   }
+  if (nums.hasOwnProperty(num - 3)) {
+    return convert(num-3) + 'III';
+  }
   return undefined;
 };
 
