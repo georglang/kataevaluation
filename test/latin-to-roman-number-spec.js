@@ -13,7 +13,7 @@ var convert = function(num) {
   if (nums.hasOwnProperty(num)) {
     return nums[num];
   }
-  for (var i = 1; i <= 3; i++) {
+  for (var i = 1; i <= 5; i++) {
     if (nums.hasOwnProperty(num - i)) {
       return convert(num - i) + convert(i);
     }
