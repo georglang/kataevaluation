@@ -13,6 +13,9 @@ var convert = function(num) {
   if (nums.hasOwnProperty(num)) {
     return nums[num];
   }
+  if (num > 10) {
+    return nums[10] + convert(num - 10);
+  }
   for (var i = 1; i <= 5; i++) {
     if (nums.hasOwnProperty(num - i)) {
       return convert(num - i) + convert(i);
