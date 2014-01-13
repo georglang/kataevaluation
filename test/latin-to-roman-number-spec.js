@@ -7,14 +7,10 @@ var convert = function(num) {
   if (nums.hasOwnProperty(num)) {
     return nums[num];
   }
-  if (nums.hasOwnProperty(num - 1)) {
-    return convert(num - 1) + 'I';
-  }
-  if (nums.hasOwnProperty(num - 2)) {
-    return convert(num - 2) + 'II';
-  }
-  if (nums.hasOwnProperty(num - 3)) {
-    return convert(num-3) + 'III';
+  for (var i = 1; i <= 3; i++) {
+    if (nums.hasOwnProperty(num - i)) {
+      return convert(num - i) + convert(i);
+    }
   }
   return undefined;
 };
