@@ -63,6 +63,10 @@ describe('latin to roman number', function() {
         expect(convert(9))
           .toBe('IX');
       });
+      it('4 => IV', function() {
+        expect(convert(4))
+          .toBe('IV');
+      });
     });
   });
 });
