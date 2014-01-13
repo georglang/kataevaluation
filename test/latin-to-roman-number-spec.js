@@ -56,5 +56,12 @@ describe('latin to roman number', function() {
           .toBe('VIII');
       });
     });
+
+    describe('prefix', function() {
+      it('9 => IX', function() {
+        expect(convert(9))
+          .toBe('IX');
+      });
+    });
   });
 });
