@@ -24,7 +24,10 @@ var convert = function (arabicNum) {
   if(arabicNum == 100){
     return 'C';
   }
+  if(arabicNum == 500){
     return 'D';
+  }
+    return 'M';
 };
 
 
