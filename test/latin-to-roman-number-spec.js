@@ -26,9 +26,16 @@ describe('latin to roman number', function() {
       .toBe(undefined);
   });
 
-  it('1 should be I', function() {
-    expect(convert(1))
-      .toBe('I');
+  [
+    [1, 'I']
+  ].forEach(function(arr) {
+    var latin = arr[0];
+    var roman = arr[1];
+
+    it(latin + ' should be ' + roman, function() {
+      expect(convert(latin))
+        .toBe(roman);
+    });
   });
 
   it('5 should be V', function() {
