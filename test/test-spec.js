@@ -9,7 +9,7 @@ M 1000
 */
 
 var convert = function () {
-  return undefined;
+  return 'I';
 };
 
 describe('Roman Numberals', function() {
