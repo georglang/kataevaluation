@@ -12,6 +12,9 @@ var convert = function (arabicNum) {
   if (arabicNum == 1) {
     return 'I';
   }
+  if (arabicNum == 2) {
+    return 'II';
+  }
   if(arabicNum == 5){
     return 'V';
   }
