@@ -37,7 +37,7 @@ describe('latin to roman number', function() {
       .toBe('X');
   });
 
-  describe('multi character numbers', function() {
+  describe('multi character numbers, post fix', function() {
     it('2 => II', function() {
       expect(convert(2))
         .toBe('II');
