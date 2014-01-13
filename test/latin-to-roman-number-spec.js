@@ -78,4 +78,11 @@ describe('latin to roman number', function() {
     });
   });
 
+  describe('complex numbers', function() {
+    it('XV', function() {
+      expect(convert(15))
+        .toBe('XV');
+    });
+  });
+
 });
