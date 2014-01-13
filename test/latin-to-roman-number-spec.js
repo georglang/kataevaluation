@@ -2,6 +2,9 @@ var convert = function(num) {
   if (num == 1) {
     return 'I';
   }
+  if (num == 5) {
+    return 'V';
+  }
   return undefined;
 };
 
