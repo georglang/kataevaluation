@@ -6,7 +6,7 @@
  C 100
  D 500
  M 1000
- */
+*/
 
 var convert = function (arabicNum) {
   if (arabicNum == 1) {
@@ -53,4 +53,9 @@ describe('Roman Numberals', function () {
   it('should convert 1000 to M', function () {
     expect(convert(1000)).toBe('M');
   });
+  it('should convert 2 to II', function () {
+    expect(convert(2)).toBe('II');
+  });
+
+
 });
