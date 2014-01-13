@@ -1,6 +1,8 @@
 describe('latin to roman number', function() {
-  it('setup', function() {
-    expect(true)
-      .toBe(false);
+
+  it('0 should be undefined', function() {
+    expect(convert(0))
+      .toBe(undefined);
   });
+
 });
