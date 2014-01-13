@@ -25,4 +25,7 @@ describe('Roman Numberals', function () {
   it('should convert 5 to V', function () {
     expect(convert(5)).toBe('V');
   });
+  it('should convert 10 to X', function () {
+    expect(convert(10)).toBe('X');
+  });
 });
