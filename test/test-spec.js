@@ -18,7 +18,10 @@ var convert = function (arabicNum) {
   if(arabicNum == 10){
     return 'X';
   }
+  if(arabicNum == 50){
     return 'L';
+  }
+    return 'C';
 };
 
 
