@@ -83,6 +83,10 @@ describe('latin to roman number', function() {
       expect(convert(15))
         .toBe('XV');
     });
+    it('XVI', function() {
+      expect(convert(16))
+        .toBe('XVI');
+    });
   });
 
 });
