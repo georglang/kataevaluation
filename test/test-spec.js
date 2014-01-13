@@ -21,7 +21,10 @@ var convert = function (arabicNum) {
   if(arabicNum == 50){
     return 'L';
   }
+  if(arabicNum == 100){
     return 'C';
+  }
+    return 'D';
 };
 
 
@@ -40,5 +43,8 @@ describe('Roman Numberals', function () {
   });
   it('should convert 100 to C', function () {
     expect(convert(100)).toBe('C');
+  });
+  it('should convert 500 to D', function () {
+    expect(convert(500)).toBe('D');
   });
 });
