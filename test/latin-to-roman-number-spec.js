@@ -37,22 +37,24 @@ describe('latin to roman number', function() {
       .toBe('X');
   });
 
-  describe('multi character numbers, post fix', function() {
-    it('2 => II', function() {
-      expect(convert(2))
-        .toBe('II');
-    });
-    it('3 => III', function() {
-      expect(convert(3))
-        .toBe('III');
-    });
-    it('6 => VI', function() {
-      expect(convert(6))
-        .toBe('VI');
-    });
-    it('8 => VIII', function() {
-      expect(convert(8))
-        .toBe('VIII');
+  describe('multi character numbers', function() {
+    describe('post fix', function() {
+      it('2 => II', function() {
+        expect(convert(2))
+          .toBe('II');
+      });
+      it('3 => III', function() {
+        expect(convert(3))
+          .toBe('III');
+      });
+      it('6 => VI', function() {
+        expect(convert(6))
+          .toBe('VI');
+      });
+      it('8 => VIII', function() {
+        expect(convert(8))
+          .toBe('VIII');
+      });
     });
   });
 });
