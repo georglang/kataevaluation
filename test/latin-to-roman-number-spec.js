@@ -8,7 +8,7 @@ var convert = function(num) {
     return nums[num];
   }
   if (nums.hasOwnProperty(num - 1)) {
-    return 'II';
+    return convert(num - 1) + 'I';
   }
   if (nums.hasOwnProperty(num - 2)) {
     return 'III';
