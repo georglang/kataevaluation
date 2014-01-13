@@ -7,7 +7,8 @@ var convert = function(num) {
     1: 'I',
     50: 'L',
     100: 'C',
-    500: 'D'
+    500: 'D',
+    1000: 'M'
   };
   if (nums.hasOwnProperty(num)) {
     return nums[num];
