@@ -5,7 +5,8 @@ var convert = function(num) {
     4: 'IV',
     5: 'V',
     1: 'I',
-    50: 'L'
+    50: 'L',
+    100: 'C'
   };
   if (nums.hasOwnProperty(num)) {
     return nums[num];
