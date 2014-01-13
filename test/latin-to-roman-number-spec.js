@@ -10,6 +10,9 @@ var convert = function(num) {
   if (nums.hasOwnProperty(num - 1)) {
     return 'II';
   }
+  if (nums.hasOwnProperty(num - 2)) {
+    return 'III';
+  }
   return undefined;
 };
 
