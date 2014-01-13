@@ -27,7 +27,11 @@ describe('latin to roman number', function() {
   });
 
   [
-    [1, 'I']
+    [1, 'I'],
+    [5, 'V'],
+    [10, 'X'],
+    [50, 'L'],
+    [100, 'C'],
   ].forEach(function(arr) {
     var latin = arr[0];
     var roman = arr[1];
@@ -36,26 +40,6 @@ describe('latin to roman number', function() {
       expect(convert(latin))
         .toBe(roman);
     });
-  });
-
-  it('5 should be V', function() {
-    expect(convert(5))
-      .toBe('V');
-  });
-
-  it('10 should be X', function() {
-    expect(convert(10))
-      .toBe('X');
-  });
-
-  it('50 should be L', function() {
-    expect(convert(50))
-      .toBe('L');
-  });
-
-  it('100 should be C', function() {
-    expect(convert(100))
-      .toBe('C');
   });
 
   describe('multi character numbers', function() {
