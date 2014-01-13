@@ -32,4 +32,10 @@ describe('latin to roman number', function() {
       .toBe('X');
   });
 
+  describe('multi character numbers', function() {
+    it('2 => II', function() {
+      expect(convert(2))
+        .toBe('II');
+    });
+  });
 });
