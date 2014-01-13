@@ -1,4 +1,7 @@
-var convert = function() {
+var convert = function(num) {
+  if (num == 1) {
+    return 'I';
+  }
   return undefined;
 };
 
