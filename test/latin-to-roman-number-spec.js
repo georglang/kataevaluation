@@ -1,3 +1,5 @@
+var convert;
+
 describe('latin to roman number', function() {
 
   it('0 should be undefined', function() {
