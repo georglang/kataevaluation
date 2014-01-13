@@ -1,4 +1,6 @@
-var convert = function() {};
+var convert = function() {
+  return undefined;
+};
 
 describe('latin to roman number', function() {
 
