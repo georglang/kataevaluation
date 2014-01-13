@@ -7,4 +7,9 @@ describe('latin to roman number', function() {
       .toBe(undefined);
   });
 
+  it('1 should be I', function() {
+    expect(convert(1))
+      .toBe('I');
+  });
+
 });
