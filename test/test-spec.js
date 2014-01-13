@@ -8,7 +8,9 @@ D 500
 M 1000
 */
 
-var convert = undefined;
+var convert = function () {
+  return undefined;
+};
 
 describe('Roman Numberals', function() {
   it('should convert 1 to I', function(){
