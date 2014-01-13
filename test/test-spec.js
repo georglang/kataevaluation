@@ -73,7 +73,11 @@ describe('Roman Numberals', function () {
   it('should convert 1000 to M', function () {
     expect(convert(1000)).toBe('M');
   });
+
   it('should convert 2 to II', function () {
     expect(convert(2)).toBe('II');
+  });
+  it('should convert 1999 to MCMXCIX', function () {
+    expect(convert(1999)).toBe('MCMXCIX');
   });
 });
