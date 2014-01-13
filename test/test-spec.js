@@ -47,4 +47,7 @@ describe('Roman Numberals', function () {
   it('should convert 500 to D', function () {
     expect(convert(500)).toBe('D');
   });
+  it('should convert 1000 to M', function () {
+    expect(convert(1000)).toBe('M');
+  });
 });
