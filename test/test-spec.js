@@ -9,30 +9,47 @@
 */
 
 var convert = function (arabicNum) {
-  if (arabicNum == 1) {
-    return 'I';
-  }
-  if (arabicNum == 2) {
-    return 'II';
-  }
-  if(arabicNum == 5){
-    return 'V';
-  }
-  if(arabicNum == 10){
-    return 'X';
-  }
-  if(arabicNum == 50){
-    return 'L';
-  }
-  if(arabicNum == 100){
-    return 'C';
-  }
-  if(arabicNum == 500){
-    return 'D';
-  }
-    return 'M';
-};
+  var romanNumber = '';
+  var startIndex = 0;
 
+  var arr = [
+    {"arabic": 1000, 'roman': 'M'},
+    {"arabic": 900, 'roman': 'CM'},
+    {"arabic": 800, 'roman': 'DCC'},
+    {"arabic": 700, 'roman': 'DCC'},
+    {"arabic": 600, 'roman': 'DC'},
+    {"arabic": 500, 'roman': 'D'},
+    {"arabic": 400, 'roman': 'CD'},
+    {"arabic": 300, 'roman': 'CCC'},
+    {"arabic": 100, 'roman': 'C'},
+    {"arabic": 90, 'roman': 'XC'},
+    {"arabic": 80, 'roman': 'LXXX'},
+    {"arabic": 70, 'roman': 'LXX'},
+    {"arabic": 60, 'roman': 'LX'},
+    {"arabic": 50, 'roman': 'L'},
+    {"arabic": 40, 'roman': 'XL'},
+    {"arabic": 10, 'roman': 'X'},
+    {"arabic": 9, 'roman': 'IX'},
+    {"arabic": 8, 'roman': 'VIII'},
+    {"arabic": 7, 'roman': 'VII'},
+    {"arabic": 6, 'roman': 'VI'},
+    {"arabic": 5, 'roman': 'V'},
+    {"arabic": 4, 'roman': 'IV'},
+    {"arabic": 1, 'roman': 'I'}
+  ];
+
+  while (arabicNum > 0) {
+    for (var i = startIndex; i < arr.length; i++) {
+      if (arr[i].arabic <= arabicNum) {
+        romanNumber += arr[i].roman;
+        arabicNum -= arr[i].arabic;
+        startIndex = i;
+        break;
+      }
+    }
+  }
+  return romanNumber;
+};
 
 describe('Roman Numberals', function () {
   it('should convert 1 to I', function () {
@@ -59,6 +76,4 @@ describe('Roman Numberals', function () {
   it('should convert 2 to II', function () {
     expect(convert(2)).toBe('II');
   });
-
-
 });
