@@ -34,7 +34,7 @@ describe('latin to roman number', function() {
     [50, 'L'],
     [100, 'C'],
     [500, 'D'],
-    [1000, 'M'],
+    [1000, 'M']
   ].forEach(function(arr) {
     var latin = arr[0];
     var roman = arr[1];
