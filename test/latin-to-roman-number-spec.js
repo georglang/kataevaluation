@@ -51,5 +51,9 @@ describe('latin to roman number', function() {
       expect(convert(6))
         .toBe('VI');
     });
+    it('8 => VIII', function() {
+      expect(convert(8))
+        .toBe('VIII');
+    });
   });
 });
