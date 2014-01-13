@@ -35,4 +35,7 @@ describe('Roman Numberals', function () {
   it('should convert 50 to L', function () {
     expect(convert(50)).toBe('L');
   });
+  it('should convert 100 to C', function () {
+    expect(convert(100)).toBe('C');
+  });
 });
