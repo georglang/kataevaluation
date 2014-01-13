@@ -15,7 +15,10 @@ var convert = function (arabicNum) {
   if(arabicNum == 5){
     return 'V';
   }
+  if(arabicNum == 10){
     return 'X';
+  }
+    return 'L';
 };
 
 
@@ -29,7 +32,7 @@ describe('Roman Numberals', function () {
   it('should convert 10 to X', function () {
     expect(convert(10)).toBe('X');
   });
-  it('should convert 50 to C', function () {
-    expect(convert(50)).toBe('C');
+  it('should convert 50 to L', function () {
+    expect(convert(50)).toBe('L');
   });
 });
