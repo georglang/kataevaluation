@@ -7,6 +7,9 @@ var convert = function(num) {
   if (nums.hasOwnProperty(num)) {
     return nums[num];
   }
+  if (nums.hasOwnProperty(num - 1)) {
+    return 'II';
+  }
   return undefined;
 };
 
