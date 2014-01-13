@@ -40,5 +40,9 @@ describe('latin to roman number', function() {
       expect(convert(2))
         .toBe('II');
     });
+    it('3 => III', function() {
+      expect(convert(3))
+        .toBe('III');
+    });
   });
 });
