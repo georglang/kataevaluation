@@ -16,4 +16,7 @@ describe('Roman Numberals', function() {
   it('should convert 1 to I', function(){
     expect(convert(1)).toBe('I');
   });
+  it('should convert 5 to V', function(){
+    expect(convert(5)).toBe('V');
+  });
 });
