@@ -11,7 +11,7 @@ var convert = function(num) {
     return convert(num - 1) + 'I';
   }
   if (nums.hasOwnProperty(num - 2)) {
-    return 'III';
+    return convert(num - 2) + 'II';
   }
   if (nums.hasOwnProperty(num - 3)) {
     return convert(num-3) + 'III';
