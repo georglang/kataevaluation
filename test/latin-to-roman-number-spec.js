@@ -1,12 +1,11 @@
 var convert = function(num) {
-  if (num == 1) {
-    return 'I';
-  }
-  if (num == 5) {
-    return 'V';
-  }
-  if (num == 10) {
-    return 'X';
+  var nums = {
+    10: 'X',
+    5: 'V',
+    1: 'I'
+  };
+  if (nums.hasOwnProperty(num)) {
+    return nums[num];
   }
   return undefined;
 };
