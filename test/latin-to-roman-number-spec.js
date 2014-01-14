@@ -90,6 +90,10 @@ describe('latin to roman number', function() {
       expect(convert(16))
         .toBe('XVI');
     });
+    it('30', function() {
+      expect(convert(30))
+        .toBe('XXX');
+    });
   });
 
 });
