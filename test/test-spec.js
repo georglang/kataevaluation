@@ -1,4 +1,6 @@
-var convert = undefined;
+var convert = function () {
+  return undefined;
+};
 
 describe('Roman Numerals Session 2', function() {
   it('should convert 1 to I', function(){
