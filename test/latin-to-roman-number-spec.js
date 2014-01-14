@@ -94,6 +94,10 @@ describe('latin to roman number', function() {
       expect(convert(30))
         .toBe('XXX');
     });
+    it('40', function() {
+      expect(convert(40))
+        .toBe('XL');
+    });
   });
 
 });
