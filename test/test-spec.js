@@ -41,4 +41,7 @@ describe('Roman Numerals Session 2', function () {
   it('VIII', function () {
     expect(convert(8)).toBe('VIII');
   });
+  it('XXVII', function () {
+    expect(convert(27)).toBe('XXVII');
+  });
 });
