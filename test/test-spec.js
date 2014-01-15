@@ -1,8 +1,9 @@
 var convert = function (arabic) {
-  if(arabic == 2){
-    return 'II'
+  var roman = "";
+  while(arabic-- > 0){
+    roman += 'I'
   }
-  return 'I';
+  return roman;
 };
 
 describe('Roman Numerals Session 2', function() {
