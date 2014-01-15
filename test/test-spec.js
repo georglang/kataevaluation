@@ -6,12 +6,16 @@ var convert = function (arabic) {
     4: 'IV',
     5: 'V',
     9: 'IX',
-    10: 'X'
+    10: 'X',
+    100: 'C'
   };
 
 
   if (map.hasOwnProperty(arabic)) {
     return map[arabic]
+  }
+  if (arabic > 100) {
+    return convert(100) + convert(arabic - 100);
   }
   if (arabic > 10) {
     return convert(10) + convert(arabic - 10);
@@ -52,5 +56,9 @@ describe('roman numerals session 3', function () {
   });
   it('XIX', function () {
     expect(convert(19)).toBe('XIX');
+  });
+
+  it('CXIX', function () {
+    expect(convert(119)).toBe('CXIX');
   });
 });
