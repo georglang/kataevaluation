@@ -15,17 +15,18 @@ var convert = function (arabic) {
   if (map.hasOwnProperty(arabic)) {
     return map[arabic]
   }
-  if (arabic > 500) {
-    return convert(500) + convert(arabic - 500);
+  var steps = [500, 100, 10, 5];
+  if (arabic > steps[0]) {
+    return convert(steps[0]) + convert(arabic - steps[0]);
   }
-  if (arabic > 100) {
-    return convert(100) + convert(arabic - 100);
+  if (arabic > steps[1]) {
+    return convert(steps[1]) + convert(arabic - steps[1]);
   }
-  if (arabic > 10) {
-    return convert(10) + convert(arabic - 10);
+  if (arabic > steps[2]) {
+    return convert(steps[2]) + convert(arabic - steps[2]);
   }
-  if (arabic > 5) {
-    return convert(5) + convert(arabic - 5);
+  if (arabic > steps[3]) {
+    return convert(steps[3]) + convert(arabic - steps[3]);
   }
   return 'XX';
 };
