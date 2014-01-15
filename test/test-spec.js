@@ -1,8 +1,6 @@
 var convert = function (arabic) {
   var map = {
     1: 'I',
-    2: 'II',
-    3: 'III',
     4: 'IV',
     5: 'V',
     9: 'IX',
@@ -16,7 +14,7 @@ var convert = function (arabic) {
   if (map.hasOwnProperty(arabic)) {
     return map[arabic]
   }
-  var steps = [500, 100, 10, 5];
+  var steps = [500, 100, 10, 5, 1];
   for (var i=0; i<steps.length; i++){
     if (arabic > steps[i]) {
       return convert(steps[i]) + convert(arabic - steps[i]);
