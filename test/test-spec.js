@@ -1,5 +1,5 @@
-var arabicDigits = [10, 5, 1];
-var romanDigits = ['X', 'V', 'I'];
+var arabicDigits = [10, 5, 4, 1];
+var romanDigits = ['X', 'V', 'IV', 'I'];
 
 var convert = function (arabic) {
   var roman = "";
