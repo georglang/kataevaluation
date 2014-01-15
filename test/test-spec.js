@@ -38,4 +38,7 @@ describe('Roman Numerals Session 2', function () {
   it('XXXIII', function () {
     expect(convert(33)).toBe('XXXIII');
   });
+  it('VIII', function () {
+    expect(convert(8)).toBe('VIII');
+  });
 });
