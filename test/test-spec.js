@@ -42,4 +42,7 @@ describe('roman numerals session 3', function () {
   it('XIII', function () {
     expect(convert(13)).toBe('XIII');
   });
+  it('XVIII', function () {
+    expect(convert(18)).toBe('XVIII');
+  });
 });
