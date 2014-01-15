@@ -2,7 +2,10 @@ var convert = function (arabic) {
   if (arabic == 1) {
     return 'I'
   }
-  return 'II'
+  if (arabic == 2) {
+    return 'II'
+  }
+  return 'III'
 };
 
 describe('roman numerals session 3', function () {
