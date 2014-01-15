@@ -32,4 +32,7 @@ describe('Roman Numerals Session 2', function () {
   it('XXX', function () {
     expect(convert(30)).toBe('XXX');
   });
+  it('IX', function () {
+    expect(convert(11)).toBe('XI');
+  });
 });
