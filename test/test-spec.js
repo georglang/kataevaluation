@@ -7,12 +7,16 @@ var convert = function (arabic) {
     5: 'V',
     9: 'IX',
     10: 'X',
-    100: 'C'
+    100: 'C',
+    500: 'D'
   };
 
 
   if (map.hasOwnProperty(arabic)) {
     return map[arabic]
+  }
+  if (arabic > 500) {
+    return convert(500) + convert(arabic - 500);
   }
   if (arabic > 100) {
     return convert(100) + convert(arabic - 100);
