@@ -50,4 +50,7 @@ describe('Roman Numerals Session 2', function () {
   it('MMDLXXXIX', function () {
     expect(convert(2589)).toBe('MMDLXXXIX');
   });
+  it('MMMMMMMMMDLXXVIII', function () {
+    expect(convert(9578)).toBe('MMMMMMMMMDLXXVIII');
+  });
 });
