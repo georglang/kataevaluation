@@ -13,10 +13,10 @@ var convert = function (arabic) {
     return map[arabic]
   }
   if (arabic > 10) {
-    return 'X' + convert(arabic - 10);
+    return convert(10) + convert(arabic - 10);
   }
   if (arabic > 5) {
-    return 'V' + convert(arabic - 5);
+    return convert(5) + convert(arabic - 5);
   }
   return 'XX';
 };
