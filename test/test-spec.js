@@ -7,6 +7,7 @@ var convert = function (arabic) {
     5: 'V',
     9: 'IX',
     10: 'X',
+    90: 'XC',
     100: 'C',
     500: 'D'
   };
