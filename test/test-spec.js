@@ -12,4 +12,7 @@ describe('Roman Numerals Session 2', function() {
   it('II', function(){
     expect(convert(2)).toBe('II');
   });
+  it('III', function(){
+    expect(convert(3)).toBe('III');
+  });
 });
