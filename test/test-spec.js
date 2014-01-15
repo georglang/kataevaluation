@@ -11,6 +11,9 @@ var convert = function (arabic) {
   if (map.hasOwnProperty(arabic)) {
     return map[arabic]
   }
+  if (arabic > 10) {
+    return 'X' + convert(arabic - 10);
+  }
   if (arabic > 20) {
     return 'XX' + convert(arabic - 20);
   }
