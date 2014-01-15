@@ -1,13 +1,14 @@
+var arabicDigits = [10, 1];
+var romanDigits = ['X', 'I'];
+
 var convert = function (arabic) {
   var roman = "";
 
-  while (arabic >= 10) {
-    roman += 'X';
-    arabic -= 10;
-  }
-  while (arabic >= 1) {
-    roman += 'I';
-    arabic -= 1;
+  for (var i=0; i<arabicDigits.length; i++){
+    while(arabic >= arabicDigits[i]){
+      roman += romanDigits[i];
+      arabic -= arabicDigits[i];
+    }
   }
   return roman;
 };
