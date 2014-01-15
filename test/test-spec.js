@@ -49,4 +49,7 @@ describe('roman numerals session 3', function () {
   it('XVIII', function () {
     expect(convert(18)).toBe('XVIII');
   });
+  it('XIX', function () {
+    expect(convert(19)).toBe('XIX');
+  });
 });
