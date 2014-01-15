@@ -6,8 +6,13 @@ var convert = function (arabic) {
     4: 'IV',
     10: 'X'
   };
+
+
   if (map.hasOwnProperty(arabic)) {
     return map[arabic]
+  }
+  if (arabic > 20) {
+    return 'XX' + convert(arabic - 20);
   }
   return 'XX';
 };
