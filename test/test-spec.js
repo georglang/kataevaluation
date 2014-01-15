@@ -6,7 +6,10 @@ var convert = function (arabic) {
     4: 'IV',
     10: 'X'
   };
-  return map[arabic]
+  if (map.hasOwnProperty(arabic)) {
+    return map[arabic]
+  }
+  return 'XX';
 };
 
 describe('roman numerals session 3', function () {
