@@ -35,4 +35,7 @@ describe('Roman Numerals Session 2', function () {
   it('IX', function () {
     expect(convert(11)).toBe('XI');
   });
+  it('XXXIII', function () {
+    expect(convert(33)).toBe('XXXIII');
+  });
 });
