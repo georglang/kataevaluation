@@ -16,4 +16,7 @@ describe('Roman Numerals Session 2', function() {
   it('III', function(){
     expect(convert(3)).toBe('III');
   });
+  it('X', function(){
+    expect(convert(10)).toBe('X');
+  });
 });
