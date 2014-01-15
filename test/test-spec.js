@@ -22,4 +22,7 @@ describe('Roman Numerals Session 2', function() {
   it('X', function(){
     expect(convert(10)).toBe('X');
   });
+  it('XX', function(){
+    expect(convert(20)).toBe('XX');
+  });
 });
