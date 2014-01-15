@@ -62,4 +62,7 @@ describe('roman numerals session 3', function () {
   it('DCXIX', function () {
     expect(convert(619)).toBe('DCXIX');
   });
+  it('XC', function () {
+    expect(convert(90)).toBe('XC');
+  });
 });
