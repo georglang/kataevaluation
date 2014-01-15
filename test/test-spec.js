@@ -4,6 +4,7 @@ var convert = function (arabic) {
     2: 'II',
     3: 'III',
     4: 'IV',
+    5: 'V',
     10: 'X'
   };
 
@@ -13,6 +14,9 @@ var convert = function (arabic) {
   }
   if (arabic > 10) {
     return 'X' + convert(arabic - 10);
+  }
+  if (arabic > 5) {
+    return 'V' + convert(arabic - 5);
   }
   return 'XX';
 };
