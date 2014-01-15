@@ -31,4 +31,7 @@ describe('roman numerals session 3', function () {
   it('XX', function () {
     expect(convert(20)).toBe('XX');
   });
+  it('XXIII', function () {
+    expect(convert(23)).toBe('XXIII');
+  });
 });
