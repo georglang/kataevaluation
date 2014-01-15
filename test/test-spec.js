@@ -18,4 +18,7 @@ describe('roman numerals session 3', function () {
   it('III', function () {
     expect(convert(3)).toBe('III');
   });
+  it('IV', function () {
+    expect(convert(4)).toBe('IV');
+  });
 });
