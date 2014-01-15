@@ -16,17 +16,10 @@ var convert = function (arabic) {
     return map[arabic]
   }
   var steps = [500, 100, 10, 5];
-  if (arabic > steps[0]) {
-    return convert(steps[0]) + convert(arabic - steps[0]);
-  }
-  if (arabic > steps[1]) {
-    return convert(steps[1]) + convert(arabic - steps[1]);
-  }
-  if (arabic > steps[2]) {
-    return convert(steps[2]) + convert(arabic - steps[2]);
-  }
-  if (arabic > steps[3]) {
-    return convert(steps[3]) + convert(arabic - steps[3]);
+  for (var i=0; i<steps.length; i++){
+    if (arabic > steps[i]) {
+      return convert(steps[i]) + convert(arabic - steps[i]);
+    }
   }
   return 'XX';
 };
