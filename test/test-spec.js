@@ -47,4 +47,7 @@ describe('Roman Numerals Session 2', function () {
   it('IV', function () {
     expect(convert(4)).toBe('IV');
   });
+  it('MMDLXXXIX', function () {
+    expect(convert(2589)).toBe('MMDLXXXIX');
+  });
 });
