@@ -1,8 +1,11 @@
 var convert = function (arabic) {
-  if (arabic == 10) {
-    return 'X'
-  }
   var roman = "";
+
+  while (arabic >= 10) {
+    roman += 'X';
+    arabic -= 10;
+  }
+
   while(arabic-- > 0){
     roman += 'I'
   }
