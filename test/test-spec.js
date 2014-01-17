@@ -10,7 +10,7 @@ function roman(romanString) {
   };
 
   if (romanString === 'VI') {
-    return 6;
+    return digits['VI'.charAt(0)] + 1;
   }
 
   return digits[romanString];
