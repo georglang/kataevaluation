@@ -18,4 +18,7 @@ describe('roman numerals session4', function() {
   it('X to 10', function(){
     expect(roman('X')).toBe(10);
   });
+  it('L to 50', function(){
+    expect(roman('L')).toBe(50);
+  });
 });
