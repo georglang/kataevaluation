@@ -1,8 +1,10 @@
 function roman(romanString) {
-  if(romanString === 'V'){
-    return 5;
-  }
-  return 1;
+  var digits ={
+    V: 5,
+    I: 1
+  };
+
+  return digits[romanString];
 }
 
 describe('roman numerals session4', function() {
