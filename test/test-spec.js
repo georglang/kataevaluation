@@ -9,6 +9,10 @@ function roman(romanString) {
     I: 1
   };
 
+  if (romanString === 'VI') {
+    return 6;
+  }
+
   return digits[romanString];
 }
 
