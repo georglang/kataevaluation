@@ -16,9 +16,9 @@ function roman(romanString) {
   if (romanString.length === 3) {
     var sum = 0;
 
-    sum += digits[romanString.charAt(0)]
-        + digits[romanString.charAt(1)]
-        + digits[romanString.charAt(2)];
+    for (var i = 0; i < 3; i++) {
+      sum += digits[romanString.charAt(i)]
+    }
     return sum;
   }
 
