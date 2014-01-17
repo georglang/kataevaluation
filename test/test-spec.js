@@ -11,19 +11,13 @@ function roman(romanString) {
 
   var sum = 0;
 
-  var subtractions = ['IV', 'XL'];
+  var subtractions = ['IV', 'XL', 'CD'];
 
   for (var s in subtractions) {
     var subtraction = subtractions[s];
     if (romanString.match(subtraction)) {
       sum -= 2 * digits[subtraction.charAt(0)];
     }
-  }
-
-
-  var subtraction2 = 'XL';
-  if (romanString.match(subtraction2) && subtractions.length < 2) {
-    sum -= 2 * digits[subtraction2.charAt(0)];
   }
 
   for (var i = 0; i < romanString.length; i++) {
@@ -71,5 +65,8 @@ describe('roman numerals session4', function () {
   });
   it('IV to 4', function () {
     expect(roman('IV')).toBe(4);
+  });
+  it('CDXLIV to 444', function () {
+    expect(roman('CDXLIV')).toBe(444);
   });
 });
