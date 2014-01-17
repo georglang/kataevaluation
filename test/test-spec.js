@@ -12,7 +12,7 @@ function roman(romanString) {
   var sum = 0;
 
   if (romanString === 'XL') {
-    sum -= 20;
+    sum -= 2 * digits['X'];
   }
 
   for (var i = 0; i < romanString.length; i++) {
