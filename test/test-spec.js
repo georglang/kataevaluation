@@ -10,9 +10,10 @@ function roman(romanString) {
   };
 
   var sum = 0;
+  var subtraction = 'XL';
 
-  if (romanString === 'XL') {
-    sum -= 2 * digits['X'];
+  if (romanString === subtraction) {
+    sum -= 2 * digits[subtraction.charAt(0)];
   }
 
   for (var i = 0; i < romanString.length; i++) {
