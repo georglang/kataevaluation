@@ -42,4 +42,7 @@ describe('roman numerals session4', function () {
   it('VI to 6', function () {
     expect(roman('VI')).toBe(6);
   });
+  it('CX to 110', function () {
+    expect(roman('CX')).toBe(110);
+  });
 });
