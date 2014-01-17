@@ -27,7 +27,10 @@ describe('roman numerals session4', function () {
   it('C to 100', function () {
     expect(roman('C')).toBe(100);
   });
-  it('C to 500', function () {
+  it('D to 500', function () {
     expect(roman('D')).toBe(500);
+  });
+  it('M to 1000', function () {
+    expect(roman('M')).toBe(1000);
   });
 });
