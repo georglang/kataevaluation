@@ -11,7 +11,7 @@ function roman(romanString) {
 
   var sum = 0;
 
-  var subtractions = ['IV', 'XL', 'CD'];
+  var subtractions = ['IV', 'XL', 'CD', 'CM', 'XC', 'IX'];
 
   for (var s in subtractions) {
     var subtraction = subtractions[s];
@@ -68,5 +68,8 @@ describe('roman numerals session4', function () {
   });
   it('CDXLIV to 444', function () {
     expect(roman('CDXLIV')).toBe(444);
+  });
+  it('CMXCIX to 999', function () {
+    expect(roman('CMXCIX')).toBe(999);
   });
 });
