@@ -59,4 +59,7 @@ describe('roman numerals session4', function () {
   it('XLII to 42', function () {
     expect(roman('XLII')).toBe(42);
   });
+  it('IV to 4', function () {
+    expect(roman('IV')).toBe(4);
+  });
 });
