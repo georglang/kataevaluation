@@ -22,4 +22,7 @@ describe('roman numerals session4', function () {
   it('L to 50', function () {
     expect(roman('L')).toBe(50);
   });
+  it('C to 100', function () {
+    expect(roman('C')).toBe(100);
+  });
 });
