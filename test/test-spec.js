@@ -11,12 +11,15 @@ function roman(romanString) {
 
   if (romanString.length === 2) {
     return digits[romanString.charAt(0)]
-    + digits[romanString.charAt(1)];
+        + digits[romanString.charAt(1)];
   }
   if (romanString.length === 3) {
-    return digits[romanString.charAt(0)]
-    + digits[romanString.charAt(1)]
-    + digits[romanString.charAt(2)];
+    var sum = 0;
+
+    sum += digits[romanString.charAt(0)]
+        + digits[romanString.charAt(1)]
+        + digits[romanString.charAt(2)];
+    return sum;
   }
 
   return digits[romanString];
