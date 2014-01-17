@@ -1,6 +1,7 @@
 function roman(romanString) {
   var digits ={
     V: 5,
+    X: 10,
     I: 1
   };
 
