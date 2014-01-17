@@ -13,7 +13,8 @@ function roman(romanString) {
     return digits[romanString.charAt(0)]
         + digits[romanString.charAt(1)];
   }
-  if (romanString.length === 3) {
+
+  if (romanString.length >= 2) {
     var sum = 0;
 
     for (var i = 0; i < romanString.length; i++) {
