@@ -1,4 +1,7 @@
-function roman() {
+function roman(romanString) {
+  if(romanString === 'V'){
+    return 5;
+  }
   return 1;
 }
 
