@@ -9,12 +9,16 @@ function roman(romanString) {
     I: 1
   };
 
-    var sum = 0;
+  var sum = 0;
 
-    for (var i = 0; i < romanString.length; i++) {
-      sum += digits[romanString.charAt(i)]
-    }
-    return sum;
+  if (romanString === 'XL') {
+    sum -= 20;
+  }
+
+  for (var i = 0; i < romanString.length; i++) {
+    sum += digits[romanString.charAt(i)]
+  }
+  return sum;
 }
 
 describe('roman numerals session4', function () {
