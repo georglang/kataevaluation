@@ -12,6 +12,10 @@ function roman(romanString) {
   var sum = 0;
   var subtraction = 'XL';
 
+  if (romanString.match('IV')) {
+    sum -= 2;
+  }
+
   if (romanString.match(subtraction)) {
     sum -= 2 * digits[subtraction.charAt(0)];
   }
