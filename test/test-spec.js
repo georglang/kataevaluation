@@ -12,7 +12,7 @@ function roman(romanString) {
   var sum = 0;
   var subtraction = 'XL';
 
-  if (romanString === subtraction) {
+  if (romanString.match(subtraction)) {
     sum -= 2 * digits[subtraction.charAt(0)];
   }
 
