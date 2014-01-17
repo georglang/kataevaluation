@@ -34,4 +34,7 @@ describe('roman numerals session4', function () {
   it('M to 1000', function () {
     expect(roman('M')).toBe(1000);
   });
+  it('VI to 6', function () {
+    expect(roman('VI')).toBe(6);
+  });
 });
