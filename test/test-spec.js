@@ -56,4 +56,7 @@ describe('roman numerals session4', function () {
   it('XL to 40', function () {
     expect(roman('XL')).toBe(40);
   });
+  it('XLII to 42', function () {
+    expect(roman('XLII')).toBe(42);
+  });
 });
