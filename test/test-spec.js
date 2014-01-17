@@ -1,24 +1,25 @@
 function roman(romanString) {
-  var digits ={
-    V: 5,
+  var digits = {
+    L: 50,
     X: 10,
+    V: 5,
     I: 1
   };
 
   return digits[romanString];
 }
 
-describe('roman numerals session4', function() {
-  it('I to 1', function(){
+describe('roman numerals session4', function () {
+  it('I to 1', function () {
     expect(roman('I')).toBe(1);
   });
-  it('V to 5', function(){
+  it('V to 5', function () {
     expect(roman('V')).toBe(5);
   });
-  it('X to 10', function(){
+  it('X to 10', function () {
     expect(roman('X')).toBe(10);
   });
-  it('L to 50', function(){
+  it('L to 50', function () {
     expect(roman('L')).toBe(50);
   });
 });
