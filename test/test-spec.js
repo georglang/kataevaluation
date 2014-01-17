@@ -13,6 +13,11 @@ function roman(romanString) {
     return digits[romanString.charAt(0)]
     + digits[romanString.charAt(1)];
   }
+  if (romanString.length === 3) {
+    return digits[romanString.charAt(0)]
+    + digits[romanString.charAt(1)]
+    + digits[romanString.charAt(2)];
+  }
 
   return digits[romanString];
 }
