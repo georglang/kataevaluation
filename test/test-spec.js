@@ -48,4 +48,7 @@ describe('roman numerals session4', function () {
   it('XVI to 16', function () {
     expect(roman('XVI')).toBe(16);
   });
+  it('XL to 40', function () {
+    expect(roman('XL')).toBe(40);
+  });
 });
