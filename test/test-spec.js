@@ -14,4 +14,7 @@ describe('roman numerals session4', function() {
   it('V to 5', function(){
     expect(roman('V')).toBe(5);
   });
+  it('X to 10', function(){
+    expect(roman('X')).toBe(10);
+  });
 });
