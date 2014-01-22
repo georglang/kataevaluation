@@ -1,4 +1,4 @@
-
+var fizz = undefined;
 
 
 describe('Fizz Buzz Session1', function() {
