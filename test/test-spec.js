@@ -36,7 +36,7 @@ describe('Fizz Buzz Session1', function () {
   it('15 to FizzBuzz', function () {
     expect(fizzBuzz(15)).toBe('FizzBuzz');
   });
-  it('50 to FizzBuzz', function () {
+  it('50 to Buzz', function () {
     expect(fizzBuzz(50)).toBe('Buzz');
   });
   });
