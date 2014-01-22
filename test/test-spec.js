@@ -1,5 +1,8 @@
-describe('test', function() {
-  it('test', function(){
-    expect(true).toBe(true);
+
+
+
+describe('Fizz Buzz Session1', function() {
+  it('3 to Fizz', function(){
+    expect(fizz(3)).toBe('Fizz');
   });
 });
