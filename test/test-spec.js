@@ -1,4 +1,6 @@
-var fizz = undefined;
+function fizz() {
+  return 'Fizz';
+}
 
 
 describe('Fizz Buzz Session1', function() {
