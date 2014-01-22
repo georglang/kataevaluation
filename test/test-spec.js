@@ -1,6 +1,3 @@
-function buzz() {
-  return 'Buzz';
-}
 function fizzBuzz(value) {
   if (value == '3') {
     return 'Fizz';
