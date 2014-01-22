@@ -1,6 +1,3 @@
-function fizz() {
-  return 'Fizz';
-}
 function buzz() {
   return 'Buzz';
 }
