@@ -39,5 +39,7 @@ describe('Fizz Buzz Session1', function () {
   it('50 to Buzz', function () {
     expect(fizzBuzz(50)).toBe('Buzz');
   });
+  it('100 to Buzz', function () {
+    expect(fizzBuzz(100)).toBe('Buzz');
   });
 });
