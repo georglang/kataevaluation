@@ -4,6 +4,9 @@ function fizz() {
 function buzz() {
   return 'Buzz';
 }
+function fizzBuzz() {
+  return 1;
+}
 
 
 describe('Fizz Buzz Session1', function() {
@@ -14,6 +17,6 @@ describe('Fizz Buzz Session1', function() {
     expect(buzz(5)).toBe('Buzz');
   });
   it('1 to 1', function(){
-    expect(fizzBuzz(1)).toBe('1');
+    expect(fizzBuzz(1)).toBe(1);
   });
 });
