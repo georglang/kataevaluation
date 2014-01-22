@@ -1,14 +1,11 @@
 kataevaluation
 ==============
-Install jasmine-node for WebStorm
-----------------------------------
 
-Open WebStorm and go to Run -> Edit Configurations -> NodeJs -> Configuration
+Fizz Buzz
+--------------
+Description:
 
-Insert into textfields:
-
-Working directory: Path to this directory
-JavaScript file: this_directory\node_modules\jasmine-node\bin\jasmine-node
-Application parameters: test
-
-Go to Run -> Run...
+Write a program that prints the numbers from 1 to 100.
+But for multiples of three print “Fizz” instead of the number and
+for the multiples of five print “Buzz”. For numbers which are
+multiples of both three and five print “FizzBuzz”.
