@@ -4,7 +4,10 @@ function fizz() {
 function buzz() {
   return 'Buzz';
 }
-function fizzBuzz() {
+function fizzBuzz(value) {
+  if (value == '3') {
+    return 'Fizz';
+  }
   return 1;
 }
 
