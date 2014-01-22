@@ -5,7 +5,7 @@ function fizzBuzz(value) {
   if (value == '5') {
     return 'Buzz';
   }
-  return 1;
+  return value;
 }
 
 
