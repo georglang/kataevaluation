@@ -1,6 +1,9 @@
 function fizz() {
   return 'Fizz';
 }
+function buzz() {
+  return 'Buzz';
+}
 
 
 describe('Fizz Buzz Session1', function() {
