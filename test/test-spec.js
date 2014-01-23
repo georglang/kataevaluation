@@ -8,7 +8,7 @@ function fizzBuzz(value) {
   else if(!(value % 5)) {
     return "buzz";
   }
-  return "";
+  return value.toString();
 }
 
 describe('fizzBuzzSession2', function() {
