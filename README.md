@@ -12,6 +12,11 @@ do multiple Sessions of developing the Production Code by TDD.
 After the development process I will evaluate the different KATAs and Sessions depending on the Transformation Priority Premise.
 
 
+**To get as many different versions and get a lot of results to evaluate I need Your help, please participate to this project and check in your solutions of the different KATA´s**
+
+Thanks a lot.
+
+
 Getting started
 ----------------
 ----------------
