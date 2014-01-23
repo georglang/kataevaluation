@@ -24,4 +24,7 @@ describe('fizzBuzzSession2', function() {
   it('7 is nothing', function(){
     expect(fizzBuzz(7)).toBe("7");
   });
+  it('7 is nothing', function(){
+    expect(fizzBuzz(98)).toBe("98");
+  });
 });
