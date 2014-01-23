@@ -1,5 +1,10 @@
 function fizzBuzz(value) {
-  return "fizzbuzz";
+  if(!(value % 3) && !(value % 5)) {
+    return "fizzbuzz";
+  }
+  else {
+    return "fizz";
+  }
 }
 
 describe('fizzBuzzSession2', function() {
