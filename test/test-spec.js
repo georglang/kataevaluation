@@ -1,5 +1,7 @@
-describe('test', function() {
-  it('test', function(){
-    expect(true).toBe(true);
+
+
+describe('fizzBuzzSession2', function() {
+  it('3 is fizz and 5 is buzz', function(){
+    expect(fizzBuzz(15)).toBe("fizzbuzz");
   });
 });
