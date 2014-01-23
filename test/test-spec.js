@@ -2,9 +2,13 @@ function fizzBuzz(value) {
   if(!(value % 3) && !(value % 5)) {
     return "fizzbuzz";
   }
-  else {
+  else if(!(value % 3)) {
     return "fizz";
   }
+  else if(!(value % 5)) {
+    return "buzz";
+  }
+  return "";
 }
 
 describe('fizzBuzzSession2', function() {
