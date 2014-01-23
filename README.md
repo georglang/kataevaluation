@@ -27,27 +27,27 @@ The Rules are simple
 ---------------------
 ---------------------
 1. Implement Production Code only if a test fails
-2. Write test first and do Baby Steps
+2. Write tests first and do Baby Steps
 3. Commit after every change of the test code
   - for test changing commits name your commit message: 'test'
-4. Commit after each change of the production Code
+4. Commit after each change of the Production Code
   - for Production Code changing commits name your commit message: 'imp'
+5. For refactoring a test name your commit message 'ref test'
 
-For a example how to commit look at the branch romanNumeralsS2:
+
+For an example how to commit look at the branch romanNumeralsS2:
 https://github.com/georglang/kataevaluation/tree/romanNumeralsS2
 
 
 Setting up your test environment
 ---------------------------------
----------------------------------
 There are two different ways to use Jasmine as test environment.
 
-1. Open the jasmineRunner.html in your Browser
-2. Install jasmine-node for Webstorm
+  - Open the jasmineRunner.html in your Browser
+  - Or install jasmine-node for Webstorm
 
 
-Install jasmine-node for WebStorm
-----------------------------------
+Install jasmine-node for Web Storm
 ----------------------------------
 Open WebStorm and go to Run -> Edit Configurations -> click the + Button and add NodeJs -> click Configuration Tab on the right side and insert the following to the texfields:
 
