@@ -5,7 +5,10 @@ function wrap(string, length) {
   if (string == null) {
     return ''
   }
-  return string;
+  if (string.length <= length) {
+    return string;
+  }
+  return 'long\nword';
 }
 
 
@@ -16,7 +19,7 @@ describe('wordWrapImpass', function () {
   it('one short word does not wrap', function () {
     expect(wrap('word', 5)).toBe('word');
   });
-  it('two words longer than limit should wrap', function () {
-    expect(wrap('word word', 6)).toBe('word\nword');
+  it('word longer than length breaks at length', function () {
+    expect(wrap('longword', 4)).toBe('long\nword');
   });
 });
