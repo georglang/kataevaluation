@@ -28,4 +28,7 @@ describe('wordWrapImpass', function () {
   it('word longer than length breaks at length', function () {
     expect(wrap('longerword', 6)).toBe('longer\nword');
   });
+  it('word longer than twice length should break twice', function () {
+    expect(wrap('verylongerword', 4)).toBe('very\nlonger\nword');
+  });
 });
