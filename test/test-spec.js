@@ -1,5 +1,5 @@
-describe('test', function() {
-  it('test', function(){
-    expect(true).toBe(true);
+describe('wordWrapImpass', function() {
+  it('wrap null returns empty string', function(){
+    expect(wrap(null, 10)).toBe('');
   });
 });
