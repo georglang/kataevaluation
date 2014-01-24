@@ -22,4 +22,7 @@ describe('wordWrapImpass', function () {
   it('word longer than length breaks at length', function () {
     expect(wrap('longword', 4)).toBe('long\nword');
   });
+  it('word longer than length breaks at length', function () {
+    expect(wrap('longerword', 6)).toBe('longer\nword');
+  });
 });
