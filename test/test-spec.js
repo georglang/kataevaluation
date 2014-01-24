@@ -9,9 +9,8 @@ function wrap(string, length) {
     return string;
   }
   else{
-    return string.substring(0,length) + '\n' + string.substring(length);
+    return string.substring(0,length) + '\n' + wrap(string.substring(length),length);
   }
-  return 'long\nword';
 }
 
 
@@ -29,6 +28,6 @@ describe('wordWrapImpass', function () {
     expect(wrap('longerword', 6)).toBe('longer\nword');
   });
   it('word longer than twice length should break twice', function () {
-    expect(wrap('verylongerword', 4)).toBe('very\nlonger\nword');
+    expect(wrap('verylongword', 4)).toBe('very\nlong\nword');
   });
 });
