@@ -1,5 +1,5 @@
 function wrap(string, length) {
-  return null;
+  return '';
 }
 
 
