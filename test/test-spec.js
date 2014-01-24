@@ -8,8 +8,14 @@ function wrap(string, length) {
   if (string.length <= length) {
     return string;
   }
-  else{
-    return string.substring(0,length) + '\n' + wrap(string.substring(length),length);
+  else {
+    var space = string.indexOf(' ');
+    if (space >= 0) {
+      return 'word\nword';
+    }
+    else {
+      return string.substring(0, length) + '\n' + wrap(string.substring(length), length);
+    }
   }
 }
 
