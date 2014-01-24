@@ -40,6 +40,6 @@ describe('wordWrapImpass', function () {
     expect(wrap('word word', 6)).toBe('word\nword');
   });
   it('two words longer than limit should break', function () {
-    expect(wrap('wrap here', 6)).toBe('word\nhere');
+    expect(wrap('wrap here', 6)).toBe('wrap\nhere');
   });
 });
