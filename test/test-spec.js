@@ -11,7 +11,7 @@ function wrap(string, length) {
   else {
     var space = string.indexOf(' ');
     if (space >= 0) {
-      return string.substring(0, space) + '\n' + string.substring(space +1);
+      return string.substring(0, space) + '\n' + wrap(string.substring(space +1), length);
     }
     else {
       return string.substring(0, length) + '\n' + wrap(string.substring(length), length);
