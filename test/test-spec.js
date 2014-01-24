@@ -42,4 +42,7 @@ describe('wordWrapImpass', function () {
   it('two words longer than limit should break', function () {
     expect(wrap('wrap here', 6)).toBe('wrap\nhere');
   });
+  it('three words each longer than limit should wrap', function () {
+    expect(wrap('word word word', 6)).toBe('word\nword\nword');
+  });
 });
