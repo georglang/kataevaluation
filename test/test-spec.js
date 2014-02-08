@@ -10,6 +10,12 @@ describe("board", function(){
     board.addLivingCell(0,0);
     expect(board.livingCells[0].getX()).toBe(0);
   })
+
+  it("should render the correct cell coordinates", function() {
+    var board  = new Board();
+    board.addLivingCell(0,0);
+    expect(board.livingCells[0].getY()).toBe(0);
+  })
 });
 
 var Board  = function(){
