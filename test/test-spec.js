@@ -33,6 +33,8 @@ Game.prototype.decideIfDeadOrAlive = function(x,y) {
         return false;
     } else if(c === 3) {
         return true;
+    } else {
+        return false;
     }
 }
 
@@ -87,6 +89,25 @@ describe('Game of life', function() {
         var shouldLive = game.decideIfDeadOrAlive(1, 1);
 
         expect(shouldLive).toEqual(false);
+    });
+
+    it('should live with two or three neighbours', function() {
+        var game = new Game(3, 3);
+
+        game.rise(0, 0);
+        game.rise(0, 1);
+
+        var shouldLive = game.decideIfDeadOrAlive(1, 1);
+
+        expect(shouldLive).toEqual(true);
+
+        game.rise(0, 0);
+        game.rise(0, 1);
+        game.rise(0, 2);
+
+        var shouldLive = game.decideIfDeadOrAlive(1, 1);
+
+        expect(shouldLive).toEqual(true);
     });
 });
 
