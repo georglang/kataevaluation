@@ -43,4 +43,6 @@ var getCellValue = function (i, j, matrix) {
   if (!matrix[i] || !matrix[i][j]) {
     return 0;
   }
+
+  return 1;
 }
