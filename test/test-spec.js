@@ -5,3 +5,11 @@ describe("board", function(){
     expect(board.livingCells.length).toBe(1);
   })
 });
+
+var Board  = function(){
+  this.livingCells = [];
+
+  this.addCell = function(_x, _y) {
+    this.livingCells.push({x:_x, y:_y});
+  }
+};
