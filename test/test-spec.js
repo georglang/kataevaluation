@@ -31,7 +31,7 @@ Game.prototype.decideIfDeadOrAlive = function(x,y) {
 
     if (c < 2) {
         return false;
-    } else if(c === 3) {
+    } else if(c <= 3) {
         return true;
     } else {
         return false;
@@ -109,5 +109,18 @@ describe('Game of life', function() {
 
         expect(shouldLive).toEqual(true);
     });
+
+    it('should evaluate a game tick', function() {
+        var game = new Game(3, 3);
+
+        game.rise(0, 0);
+        game.rise(0, 1);
+        game.rise(0, 2);
+
+        game.tick();
+
+        expect(game.getGrid()[1][1]).toEqual(1);
+    });
+
 });
 
