@@ -15,14 +15,30 @@ describe("board", function(){
     var board  = new Board();
     board.addLivingCell(0,0);
     expect(board.livingCells[0].getY()).toBe(0);
-  })
+  });
 
   it("should tell us the number of neighbours for a cell", function() {
     var board  = new Board();
     board.addLivingCell(0,0);
     board.addLivingCell(0,1);
     expect(board.getOfNeighbours(0, 0).length ).toBe(1);
-  })
+  });
+
+  it("should tell us all surrounding cells", function() {
+    var board  = new Board();
+    var cells = board.getSurroundingCells(0, 0);
+
+    var count = 0;
+    for(var i = -1; i<=1; i++) {
+      for(var j = -1; j<= 1; j++) {
+        if(i === j && j === 0) continue;
+        expect(cells[count].getX()).toBe(j);
+        expect(cells[count].getY()).toBe(i);
+        count++;
+      }
+    }
+
+  });
 });
 
 var Board  = function(){
