@@ -23,20 +23,26 @@ describe('Game of Life - Session 5', function() {
     ];
     expect(getCellValue(1,2,matrix)).toBe(1);
   });
+
+  it("countNeighbours(i,j, matrix) returns the correct number", function(){
+    var matrix = [
+      [0,0,0],
+      [0,1,0],
+      [0,0,1]
+    ];
+    expect(countNeighbours(1,1,matrix)).toBe(1);
+  });
 });
 
 var countNeighbours = function (i,j,matrix) {
-  return 0;
-  /*
   return  getCellValue(matrix, i - 1, j - 1) +
-      matrix[i - 1][j    ] +
-      matrix[i - 1][j + 1] +
-      matrix[i    ][j - 1] +
-      matrix[i    ][j + 1] +
-      matrix[i + 1][j - 1] +
-      matrix[i + 1][j    ] +
-      matrix[i + 1][j + 1];
-      */
+          getCellValue(matrix, i - 1, j    ) +
+          getCellValue(matrix, i - 1, j + 1) +
+          getCellValue(matrix, i    , j - 1) +
+          getCellValue(matrix, i    , j + 1) +
+          getCellValue(matrix, i + 1, j - 1) +
+          getCellValue(matrix, i + 1, j    ) +
+          getCellValue(matrix, i + 1, j + 1);
 }
 
 var getCellValue = function (i, j, matrix) {
