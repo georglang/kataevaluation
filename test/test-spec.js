@@ -1,8 +1,11 @@
 willCellBeAliveInNextStep = function(world, posX, posY) {
   var cellValue = world[posY][posX];
   var countNeighbours = 0;
-  for(var x = posX-1; x < posX+2; x++){
-    for(var y = posY-1; y < posY+2; y++){
+  var startX = Math.max(0, posX - 1);
+  var startY = Math.max(0, posY - 1);
+
+  for(var x = startX; x < posX+2; x++){
+    for(var y = startY; y < posY+2; y++){
       if(world[y][x] === 1 && (posX != x || posY!= y)){
         countNeighbours++;
 
@@ -59,6 +62,18 @@ describe('Game of Life - Session 2', function() {
     ];
 
     expect(willCellBeAliveInNextStep(world, 4, 1)).toBe(true);
+
+  });
+
+  it('Dead cell three neighbors lives (world larger than 3x3)(edge)', function(){
+    var world = [
+      [0, 1, 0, 0, 1, 1],
+      [1, 1, 0, 0, 1, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0]
+    ];
+
+    expect(willCellBeAliveInNextStep(world, 0, 0)).toBe(true);
 
   });
 
