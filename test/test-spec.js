@@ -76,6 +76,17 @@ var Board  = function(){
     }
     return cells;
   };
+
+  this.getDeadNeighbours = function(_x, _y) {
+    var living = this.getOfNeighbours(_x, _y);
+    var surrounding = this.getSurroundingCells(_x, _y);
+
+    return surrounding.filter(function(cell) {
+      return living.filter(function(livingCell) {
+        
+      }).length === 1;
+    });
+  }
 };
 
 var Cell = function(x, y) {
