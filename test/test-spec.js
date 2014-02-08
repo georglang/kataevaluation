@@ -46,6 +46,12 @@ function getNeighbours(x, y) {
   ];
 }
 
+describe('schouldDie', function() {
+  it('dies when there are less than two alive neighbours', function() {
+    expect(shouldDie(x, y)).toBe(true);
+  });
+});
+
 describe('getNeighbours', function() {
   it('returns correct neighbours', function() {
     expect(getNeighbours(0, 3))
