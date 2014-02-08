@@ -12,6 +12,9 @@ willCellBeAliveInNextStep = function(world, posX, posY) {
   if(countNeighbours < 2){
     return false;
   }
+  if(countNeighbours > 3){
+    return false;
+  }
 
   return true;
 }
