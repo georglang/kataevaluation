@@ -2,7 +2,7 @@ willCellBeAliveInNextStep = function(world, posX, posY) {
   var countNeighbours = 0;
   for(var x = posX-1; x < 3; x++){
     for(var y = posY-1; y < 3; y++){
-      if(world[x][y] === 1 && posX != x && posY!= y){
+      if(world[x][y] === 1 && (posX != x || posY!= y)){
         countNeighbours++;
 
       }
@@ -13,7 +13,7 @@ willCellBeAliveInNextStep = function(world, posX, posY) {
     return false;
   }
 
-
+  return true;
 }
 
 
