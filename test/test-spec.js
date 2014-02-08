@@ -22,8 +22,6 @@ World.prototype.create = function() {
  ];
 };
 
-
-
 describe('world', function() {
   it('create', function() {
      expect((new World).create())
@@ -32,5 +30,21 @@ describe('world', function() {
          [2, 1],
          [4, 10]
        ]);
+  });
+});
+
+describe('getNeighbours', function() {
+  it('returns correct neighbours', function() {
+    expect(getNeighbours(0, 3))
+      .toEqual([
+        [-1, 2],
+        [-1, 3],
+        [-1, 4],
+        [0, 2],
+        [0, 4],
+        [1, 2],
+        [1, 3],
+        [1, 4]
+      ]);
   });
 });
