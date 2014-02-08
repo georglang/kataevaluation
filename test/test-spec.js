@@ -15,32 +15,22 @@ Game.prototype.getGrid = function() {
 }
 
 Game.prototype.countActiveNeighbours = function(x, y) {
-    var topLeftNeighbour = this.grid[x - 1][y - 1];
-    var topNeighbour = this.grid[x][y - 1];
-    var topRightNeighbour = this.grid[x + 1][y - 1];
+    return this.grid[x - 1][y - 1] + this.grid[x][y - 1] + this.grid[x + 1][y - 1] +
+           this.grid[x + 0][y - 1]                       + this.grid[x + 0][y + 1] +
+           this.grid[x - 1][y + 1] + this.grid[x][y + 1] + this.grid[x + 1][y + 1];
+}
 
-    var leftNeighbour = this.grid[x][y - 1];
-    var rightNeighbour = this.grid[x][y + 1];
+Game.prototype.rise = function(x,y) {
+  if (this.grid.length < x+1 && this.grid[x].length < y+1) {
+      this.grid[x][y] = 1;
+  }
+}
 
-    var bottomLeftNeighbour = this.grid[x - 1][y + 1];
-    var bottomNeighbour = this.grid[x][y + 1];
-    var bottomRightNeighbour = this.grid[x + 1][y + 1];
-
-    var neighbours = [
-        topLeftNeighbour, topNeighbour, topRightNeighbour,
-        leftNeighbour, rightNeighbour,
-        bottomLeftNeighbour, bottomNeighbour, bottomRightNeighbour
-    ];
-
-    var activeCount = 0;
-
-    for(var i = 0; i < neighbours.length; i += 1) {
-        if(neighbours[i] === 1) {
-            activeCount += 1;
-        }
+Game.prototype.decideIfDeadOrAlive = function(x,y) {
+    var c = this.countActiveNeighbours(x,y);
+    if (c < 2) {
+        return false;
     }
-
-    return activeCount;
 }
 
 describe('Game of life', function() {
@@ -58,5 +48,29 @@ describe('Game of life', function() {
         expect(game.countActiveNeighbours(x, y)).toBe(0);
     });
 
+    it('should kill living cell when less than two neighbours are active', function() {
+        var game = new Game(3, 3);
+
+        var x = 1;
+        var y = 1;
+
+        game.rise(x, y);
+
+        var shouldLive = game.decideIfDeadOrAlive(x, y);
+
+        expect(shouldLive).toBeFalsy();
+    });
+
+    it('should rise a dead cell when exactly three neighbours are active', function() {
+        var game = new Game(3, 3);
+
+        game.rise(0, 0);
+        game.rise(0, 1);
+        game.rise(0, 2);
+
+        var shouldLive = game.decideIfDeadOrAlive(1, 1);
+
+        expect(shouldLive).toBeTruthy();
+    });
 });
 
