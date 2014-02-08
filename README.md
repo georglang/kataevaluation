@@ -46,10 +46,12 @@ https://github.com/georglang/kataevaluation/tree/romanNumeralsS2
 
 Setting up your test environment
 ---------------------------------
-There are two different ways to use Jasmine as test environment.
+There are three different ways to use Jasmine as test environment.
 
   - Open the jasmineRunner.html in your Browser
-  - Or install jasmine-node for Webstorm
+  - Install jasmine-node (`npm install -g jasmine-node`) and use it
+    - directly in the terminal (`jasmine-node --autotest test/ --watch`)
+    - in Webstorm
 
 
 Install jasmine-node for Web Storm
