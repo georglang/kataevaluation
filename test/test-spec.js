@@ -51,4 +51,14 @@ describe('Game Of Life - Session 1', function() {
 
     expect(isCellLivingInNextStep(world, 1, 1)).toBe(1);
   });
+
+  it('Living cell with more than three live neighbors dies', function(){
+    var world = [
+      [1, 1, 1],
+      [0, 1, 1],
+      [0, 0, 0]
+    ];
+
+    expect(isCellLivingInNextStep(world, 1, 1)).toBe(0);
+  });
 });
