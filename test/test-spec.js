@@ -1,4 +1,5 @@
 willCellBeAliveInNextStep = function(world, posX, posY) {
+  var cellValue = world[posX][posY];
   var countNeighbours = 0;
   for(var x = posX-1; x < 3; x++){
     for(var y = posY-1; y < 3; y++){
@@ -9,14 +10,19 @@ willCellBeAliveInNextStep = function(world, posX, posY) {
     }
   }
 
-  if(countNeighbours < 2){
-    return false;
-  }
-  if(countNeighbours > 3){
-    return false;
-  }
+  if (cellValue == 1) {
+    if(countNeighbours < 2){
+      return false;
+    }
+    if(countNeighbours > 3){
+      return false;
+    }
 
-  return true;
+    return true;
+  }
+  else {
+    return (countNeighbours == 3);
+  }
 }
 
 
