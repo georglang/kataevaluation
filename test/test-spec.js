@@ -15,9 +15,18 @@ Game.prototype.getGrid = function() {
 }
 
 Game.prototype.countActiveNeighbours = function(x, y) {
-    return this.grid[x - 1][y - 1] + this.grid[x][y - 1] + this.grid[x + 1][y - 1] +
-           this.grid[x - 1][y + 0]                       + this.grid[x + 1][y + 0] +
-           this.grid[x - 1][y + 1] + this.grid[x][y + 1] + this.grid[x + 1][y + 1];
+    var count = 0;
+    for (var i = x - 1; i <= x + 1; i++) {
+        if (x > 0 && x < this.grid.length) {
+            for (var j = y - 1; i <= y + 1; i++) {
+                if (y > 0 && y < this.grid[0].length) {
+                    count += this.grid[i][j];
+                }
+            }
+        }
+    }
+    console.log(count);
+  return count - this.grid[x][y];
 }
 
 Game.prototype.rise = function(x,y) {
@@ -30,11 +39,19 @@ Game.prototype.decideIfDeadOrAlive = function(x,y) {
     var c = this.countActiveNeighbours(x,y);
 
     if (c < 2) {
-        return false;
+        return 0;
     } else if(c <= 3) {
-        return true;
+        return 1;
     } else {
-        return false;
+        return 0;
+    }
+}
+
+Game.prototype.tick = function() {
+    for (var x = 0; x < this.grid.length; x += 1) {
+        for (var y = 0; y < this.grid[0].length; y +=1 ) {
+            this.grid[x][y] = this.decideIfDeadOrAlive(x,y);
+        }
     }
 }
 
@@ -88,7 +105,7 @@ describe('Game of life', function() {
 
         var shouldLive = game.decideIfDeadOrAlive(1, 1);
 
-        expect(shouldLive).toEqual(false);
+        expect(shouldLive).toEqual(0);
     });
 
     it('should live with two or three neighbours', function() {
@@ -99,7 +116,7 @@ describe('Game of life', function() {
 
         var shouldLive = game.decideIfDeadOrAlive(1, 1);
 
-        expect(shouldLive).toEqual(true);
+        expect(shouldLive).toEqual(1);
 
         game.rise(0, 0);
         game.rise(0, 1);
@@ -107,7 +124,7 @@ describe('Game of life', function() {
 
         var shouldLive = game.decideIfDeadOrAlive(1, 1);
 
-        expect(shouldLive).toEqual(true);
+        expect(shouldLive).toEqual(1);
     });
 
     it('should evaluate a game tick', function() {
