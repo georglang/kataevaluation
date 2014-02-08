@@ -33,6 +33,19 @@ describe('world', function() {
   });
 });
 
+function getNeighbours(x, y) {
+  return [
+    [-1, 2],
+    [-1, 3],
+    [-1, 4],
+    [0, 2],
+    [0, 4],
+    [1, 2],
+    [1, 3],
+    [1, 4]
+  ];
+}
+
 describe('getNeighbours', function() {
   it('returns correct neighbours', function() {
     expect(getNeighbours(0, 3))
