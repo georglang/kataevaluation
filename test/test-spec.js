@@ -1,21 +1,20 @@
 var isCellLivingInNextStep = function(world, x, y) {
-  var upperLeft     = world[x - 1][y - 1];
-  var upper         = world[x    ][y - 1];
-  var upperRight    = world[x + 1][y - 1];
-  var left          = world[x - 1][y    ];
-  var right         = world[x + 1][y    ];
-  var lowerLeft     = world[x - 1][y + 1];
-  var lower         = world[x    ][y + 1];
-  var lowerRight    = world[x + 1][y + 1];
+  var numberOfNeighbors = 0;
 
-  var numberOfNeighbors =   upperLeft +
-                            upper +
-                            upperRight +
-                            left +
-                            right +
-                            lowerLeft +
-                            lower +
-                            lowerRight;
+  var neighbors = {
+    upperLeft:      world[x - 1][y - 1],
+    upper:          world[x    ][y - 1],
+    upperRight:     world[x + 1][y - 1],
+    left:           world[x - 1][y    ],
+    right:          world[x + 1][y    ],
+    lowerLeft:      world[x - 1][y + 1],
+    lower:          world[x    ][y + 1],
+    lowerRight:     world[x + 1][y + 1]
+  }
+
+  for (var location in neighbors) {
+    numberOfNeighbors += neighbors[location];
+  }
 
   var rules = {
     0: 0,
