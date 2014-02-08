@@ -31,6 +31,14 @@ var Board  = function(){
   this.addLivingCell = function(_x, _y) {
     this.livingCells.push(new Cell(_x, _y));
   }
+
+  this.getNumberOfNeighbours(_x, _y) {
+    for (var c = 0; c < this.livingCells.length; ++c) {
+      var cell = this.livingCells[c];
+
+      if (_x == cell.getX() && _y == cell.)
+    }
+  }
 };
 
 var Cell = function(x, y) {
