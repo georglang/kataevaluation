@@ -55,14 +55,14 @@ describe('Game of Life - Session 2', function() {
 
   })
 
-  it('Dead cell with exactly three live neighbours', function(){
+  it('Dead cell with less than three live neighbours stays dead', function(){
     var world = [
       [0, 0, 0],
-      [0, 0, 1],
+      [0, 0, 0],
       [0, 1, 1]
     ];
 
-    expect(willCellBeAliveInNextStep(world, 1, 1)).toBe(true);
+    expect(willCellBeAliveInNextStep(world, 1, 1)).toBe(false);
 
   });
 });
