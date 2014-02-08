@@ -75,5 +75,18 @@ describe('Game of life', function() {
 
         expect(shouldLive).toBeTruthy();
     });
+
+    it('should kill living cell when more than three neighbours are active', function() {
+        var game = new Game(3, 3);
+
+        game.rise(0, 0);
+        game.rise(0, 1);
+        game.rise(0, 2);
+        game.rise(1, 0);
+
+        var shouldLive = game.decideIfDeadOrAlive(1, 1);
+
+        expect(shouldLive).toEqual(false);
+    });
 });
 
