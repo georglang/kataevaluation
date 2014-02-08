@@ -32,13 +32,15 @@ var Board  = function(){
     this.livingCells.push(new Cell(_x, _y));
   }
 
-  this.getNumberOfNeighbours(_x, _y) {
-    for (var c = 0; c < this.livingCells.length; ++c) {
-      var cell = this.livingCells[c];
+  this.getOfNeighbours = function(_x, _y) {
+    return this.livingCells.filter(function(cell) {
+      var dx = Math.abs(_x - cell.getX());
+      var dy = Math.abs(_y - cell.getY());
 
-      if (_x == cell.getX() && _y == cell.)
-    }
+      return !(dx === 0 && dy === 0) && dx <= 1 && dy <= 1;
+    })
   }
+
 };
 
 var Cell = function(x, y) {
