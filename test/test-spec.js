@@ -13,6 +13,17 @@ describe('game of life', function() {
   });
 });
 
+World = function() {};
+World.prototype.create = function() {
+  return [
+   [0, 3],
+   [2, 1],
+   [4, 10]
+ ];
+};
+
+
+
 describe('world', function() {
   it('create', function() {
      expect((new World).create())
