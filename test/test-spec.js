@@ -21,7 +21,7 @@ describe("board", function(){
     var board  = new Board();
     board.addLivingCell(0,0);
     board.addLivingCell(0,1);
-    expect(board.getNumberOfNeighbours(0, 0)).toBe(1);
+    expect(board.getOfNeighbours(0, 0).length ).toBe(1);
   })
 });
 
