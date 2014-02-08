@@ -40,4 +40,15 @@ describe('Game of Life - Session 2', function() {
     expect(willCellBeAliveInNextStep(world, 1, 1)).toBe(true);
 
   });
+
+  it('Living cell with more than three neighbors dies', function(){
+    var world = [
+      [0, 0, 0],
+      [1, 1, 0],
+      [1, 1, 1]
+    ];
+
+    expect(willCellBeAliveInNextStep(world, 1, 1)).toBe(false);
+
+  });
 });
