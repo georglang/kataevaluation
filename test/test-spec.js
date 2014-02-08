@@ -1,5 +1,5 @@
 var isCellLivingInNextStep = function(world, x, y) {
-
+  return false;
 }
 
 describe('Game Of Life - Session 1', function() {
