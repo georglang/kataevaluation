@@ -38,6 +38,13 @@ describe("board", function(){
       }
     }
 
+    it("should tell us the number of dead neighbours for a cell", function() {
+      var board  = new Board();
+      board.addLivingCell(0,0);
+      board.addLivingCell(0,1);
+      expect(board.getDeadNeighbours(0, 0).length ).toBe(7);
+    });
+
   });
 });
 
