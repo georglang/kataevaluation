@@ -1,7 +1,12 @@
 describe('GameOfLife', function() {
 
-    it('test', function() {
-        expect(true).toBe(true);
-    });
+    it('should create Game instance', function() {
+        var game = new Game(3, 3);
+        expect(typeof game === 'object').toEqual(true);
+    })
 
 });
+
+var Game = function() {
+
+};
