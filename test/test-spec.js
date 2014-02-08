@@ -15,7 +15,16 @@ describe("board", function(){
 var Board  = function(){
   this.livingCells = [];
 
-  this.addCell = function(_x, _y) {
-    this.livingCells.push({x:_x, y:_y});
+  this.addLivingCell = function(_x, _y) {
+    this.livingCells.push(new Cell(_x, _y));
   }
 };
+
+var Cell = function(x, y) {
+  this.x = x;
+  this.y = y;
+
+  this.getX = function () {
+    return this.x;
+  }
+}
