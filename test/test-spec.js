@@ -16,6 +16,13 @@ describe("board", function(){
     board.addLivingCell(0,0);
     expect(board.livingCells[0].getY()).toBe(0);
   })
+
+  it("should tell us the number of neighbours for a cell", function() {
+    var board  = new Board();
+    board.addLivingCell(0,0);
+    board.addLivingCell(0,1);
+    expect(board.getNumberOfNeighbours(0, 0)).toBe(1);
+  })
 });
 
 var Board  = function(){
