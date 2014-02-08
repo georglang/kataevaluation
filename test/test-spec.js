@@ -4,3 +4,7 @@ describe('Game of Life - Session 5', function() {
     expect(countNeighbours()).toBeLessThan(9);
   });
 });
+
+var countNeighbours = function () {
+  return 0;
+}
