@@ -1,8 +1,8 @@
 willCellBeAliveInNextStep = function(world, posX, posY) {
   var cellValue = world[posY][posX];
   var countNeighbours = 0;
-  for(var x = posX-1; x < 3; x++){
-    for(var y = posY-1; y < 3; y++){
+  for(var x = posX-1; x < posX+2; x++){
+    for(var y = posY-1; y < posY+2; y++){
       if(world[y][x] === 1 && (posX != x || posY!= y)){
         countNeighbours++;
 
