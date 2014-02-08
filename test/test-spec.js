@@ -27,5 +27,17 @@ describe('Game of Life - Session 2', function() {
     ];
 
     expect(willCellBeAliveInNextStep(world, 1, 1)).toBe(false);
+
+  });
+
+  it('Living cell with two or three neighbors lives', function(){
+    var world = [
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 1, 1]
+    ];
+
+    expect(willCellBeAliveInNextStep(world, 1, 1)).toBe(true);
+
   });
 });
