@@ -46,7 +46,7 @@ var Board  = function(){
 
   this.addLivingCell = function(_x, _y) {
     this.livingCells.push(new Cell(_x, _y));
-  }
+  };
 
   this.getOfNeighbours = function(_x, _y) {
     return this.livingCells.filter(function(cell) {
@@ -54,9 +54,21 @@ var Board  = function(){
       var dy = Math.abs(_y - cell.getY());
 
       return !(dx === 0 && dy === 0) && dx <= 1 && dy <= 1;
-    })
-  }
+    });
+  };
 
+  this.getSurroundingCells = function(_x, _y) {
+    var cells = [];
+    var count = 0;
+    for(var i = -1; i<=1; i++) {
+      for(var j = -1; j<= 1; j++) {
+        if(i === j && j === 0) continue;
+        cells.push(new Cell(_x+j, _y+i));
+        count++;
+      }
+    }
+    return cells;
+  };
 };
 
 var Cell = function(x, y) {
