@@ -4,8 +4,8 @@ willCellBeAliveInNextStep = function(world, posX, posY) {
   var startX = Math.max(0, posX - 1);
   var startY = Math.max(0, posY - 1);
 
-  for(var x = startX; x < posX+2; x++){
-    for(var y = startY; y < posY+2; y++){
+  for(var y = startY; y < posY + 2 && y < world.length; y++){
+    for(var x = startX; x < posX + 2; x++){
       if(world[y][x] === 1 && (posX != x || posY!= y)){
         countNeighbours++;
 
