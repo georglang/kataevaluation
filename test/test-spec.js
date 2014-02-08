@@ -1,3 +1,7 @@
+var isCellLivingInNextStep = function(world, x, y) {
+
+}
+
 describe('Game Of Life - Session 1', function() {
   it('Living cell with less than two live neighbors dies', function(){
     var world = [
