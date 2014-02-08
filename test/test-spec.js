@@ -15,6 +15,14 @@ describe('Game of Life - Session 5', function() {
     ];
     expect(getCellValue(2,3,matrix)).toBe(0);
   });
+
+  it("getCellValue(i,j, matrix) returns 1 for indices of living cells", function(){
+    var matrix = [
+      [0,0,0],
+      [0,0,1]
+    ];
+    expect(getCellValue(1,2,matrix)).toBe(1);
+  });
 });
 
 var countNeighbours = function (i,j,matrix) {
