@@ -89,6 +89,18 @@ describe('Game of Life - Session 2', function() {
 
   });
 
+  it('Dead cell three neighbors lives (world larger than 3x3)(lower right corner)', function(){
+    var world = [
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 1],
+      [0, 0, 0, 0, 1, 1],
+      [0, 0, 0, 0, 1, 0]
+    ];
+
+    expect(willCellBeAliveInNextStep(world, 5, 3)).toBe(true);
+
+  });
+
   it('Living cell with more than three neighbors dies', function(){
     var world = [
       [0, 0, 0],
