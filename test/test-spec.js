@@ -16,20 +16,23 @@ Game.prototype.getGrid = function() {
 
 Game.prototype.countActiveNeighbours = function(x, y) {
     return this.grid[x - 1][y - 1] + this.grid[x][y - 1] + this.grid[x + 1][y - 1] +
-           this.grid[x + 0][y - 1]                       + this.grid[x + 0][y + 1] +
+           this.grid[x - 1][y + 0]                       + this.grid[x + 1][y + 0] +
            this.grid[x - 1][y + 1] + this.grid[x][y + 1] + this.grid[x + 1][y + 1];
 }
 
 Game.prototype.rise = function(x,y) {
-  if (this.grid.length < x+1 && this.grid[x].length < y+1) {
+  if (this.grid.length > x && this.grid[x].length > y) {
       this.grid[x][y] = 1;
   }
 }
 
 Game.prototype.decideIfDeadOrAlive = function(x,y) {
     var c = this.countActiveNeighbours(x,y);
+
     if (c < 2) {
         return false;
+    } else if(c === 3) {
+        return true;
     }
 }
 
