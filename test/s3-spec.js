@@ -64,3 +64,45 @@ describe('cell class', function() {
     expect(cell.getSumOfAliveNeighbours()).toEqual(3);
   });
 });
+
+var Cell = (function(){
+  var neighbours;
+
+  function Cell (value, x, y, inNeighbours) {
+    this.value = 1;
+    if (value === 0) {
+      this.value = value;
+    }
+    this.x = 0;
+    if (typeof x === 'number') {
+      this.x = x;
+    }
+    this.y = 0;
+    if (typeof y === 'number') {
+      this.y = y;
+    }
+    if (inNeighbours){
+      neighbours = inNeighbours;
+    } else {
+      neighbours = [
+        [0,0,0],
+        [0,0,0],
+        [0,0,0]
+      ];
+    }
+  };
+
+  Cell.prototype.getNeighbours = function() {
+    return neighbours;
+  };
+
+  Cell.prototype.getSumOfAliveNeighbours = function() {
+    return neighbours.reduce(function(p,c){
+      return p.concat(c);
+    }).reduce(function(p,c){
+      return p + c;
+    },0);
+  };
+
+  return Cell;
+})();
