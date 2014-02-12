@@ -33,3 +33,60 @@ describe('getCellFromCoordinates', function() {
     ]);
   });
 });
+
+var array = [
+  [1,1,1],
+  [0,1,0],
+  [0,0,1]
+];
+
+var deadArray = [
+  [1,1,0],
+  [0,0,0],
+  [0,0,1]
+];
+
+var finiteBoard = [
+  [1,0,0,1,0,1],
+  [0,0,1,0,0,1],
+  [1,0,0,0,1,0],
+  [0,1,0,1,0,1],
+  [1,0,0,0,1,0],
+  [1,0,0,1,1,0]
+];
+
+function sumOfNeighbours (array) {
+  return array
+    .reduce(function(p, c) {
+      return p.concat(c);
+    })
+    .reduce(function (previous, current) {
+      return previous+current;
+    }) - array[1][1];
+};
+
+function willAliveCellLive (array) {
+  var aliveForNeighbours = [,,,true,true,,,,]
+  return aliveForNeighbours[sumOfNeighbours(array)] || false;
+};
+
+function willDeadCellLive (array) {
+  return sumOfNeighbours(array) === 3;
+};
+
+function getValueFromCoordinates (array, x, y) {
+  if (array[x]) {
+    return array[x][y] || 0;
+  } else {
+    return 0;
+  }
+};
+
+function getCellFromCoordinates (array,x,y) {
+  var g = getValueFromCoordinates;
+  return [
+    [g(array,x-1,y-1),g(array,x-1,y),g(array,x-1,y+1)],
+    [g(array,x,y-1),g(array,x,y),g(array,x,y+1)],
+    [g(array,x+1,y-1),g(array,x+1,y),g(array,x+1,y+1)]
+  ];
+};
